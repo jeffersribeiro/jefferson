@@ -58,7 +58,7 @@ const useStyles = makeStyles(() => ({
       opacity: 0,
       height: 7,
       borderRadius: 8,
-      backgroundColor: '#5d00ff',
+      backgroundColor: '#3f51b5',
     },
   }),
 }));

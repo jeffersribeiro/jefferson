@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  useLocation,
   BrowserRouter as Router,
   Switch,
   Route,
@@ -17,8 +16,11 @@ import Contact from '../pages/contact';
 import Process from '../pages/process';
 import Projects from '../pages/projects';
 import Services from '../pages/services';
+
 import Header from '../components/organisms/header';
+
 import { linkType } from '../components/atoms/link';
+import Copyright from '../components/molecules/copyright';
 
 const router = [
   { name: 'Home', path: '/', Component: Home },
@@ -33,21 +35,18 @@ const router = [
 const content = {
   header: {
     title: 'Hey, I’m Seb.',
-    subtitle:
-      'A web designer and developer from Southampton in the UK. I create bespoke websites to help people go further online.',
     links: [
       { type: linkType.ANCOR, href: '/projects', label: 'Projects' },
-      { type: linkType.ANCOR, href: '/Services', label: 'Services' },
+      { type: linkType.ANCOR, href: '/services', label: 'Services' },
       { type: linkType.ANCOR, href: '/process', label: 'Process' },
       { type: linkType.ANCOR, href: '/contact', label: 'contact' },
-      { type: linkType.ANCOR, href: '/About', label: 'About' },
-      { type: linkType.ANCOR, href: '/Blog', label: 'Blog' },
+      { type: linkType.ANCOR, href: '/about', label: 'About' },
+      { type: linkType.ANCOR, href: '/blog', label: 'Blog' },
     ],
   },
 };
 
 function AnimationApp() {
-  const location = useLocation();
   return (
     <>
       <Header {...content.header} />
@@ -68,6 +67,7 @@ function AnimationApp() {
           </Switch>
         </CSSTransition>
       </TransitionGroup>
+      <Copyright />
     </>
   );
 }

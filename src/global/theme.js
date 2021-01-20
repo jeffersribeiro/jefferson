@@ -25,7 +25,7 @@ const theme = createMuiTheme({
     error: {
       main: '#fc1e1e',
     },
-    primary: { main: '#0c87fa' },
+    primary: { main: '#3f51b5' },
   },
   typography: {
     fontFamily: 'regular',

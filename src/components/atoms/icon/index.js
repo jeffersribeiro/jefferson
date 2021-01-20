@@ -11,18 +11,20 @@ export const iconColor = {
   DISABLED: 'disabled',
 };
 
-const MyIcon = ({ name, color }) => (
-  <Icon style={styles} color={color}>
+const MyIcon = ({ name, color, size }) => (
+  <Icon style={{ ...styles, fontSize: size }} color={color}>
     {name}
   </Icon>
 );
 
 MyIcon.defaultProps = {
+  size: '',
   name: '',
   color: iconColor.PRIMARY,
 };
 
 MyIcon.propTypes = {
+  size: PropTypes.string,
   name: PropTypes.string,
   color: PropTypes.string,
 };

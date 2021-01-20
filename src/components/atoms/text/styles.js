@@ -5,7 +5,6 @@ const useStyles = makeStyles(() => ({
     textAlign: align,
     fontSize: size,
     color: color,
-    width: 600,
     margin: '10px',
   }),
 }));

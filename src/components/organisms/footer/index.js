@@ -12,22 +12,28 @@ import Button, {
 
 import useStyles from './styles';
 import { fontSize } from '../../../common/_variables.css';
-const Footer = ({ title, subtitle, btnText, social }) => {
+import { useHistory } from 'react-router';
+
+const social = [{ icon: 'mail', label: 'JEFFERSONR128@GMAIL.COM' }];
+
+const Footer = () => {
+  const history = useHistory();
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.horizontalAlign}>
         <div>
-          <Title text={title} size={fontSize.title1} />
+          <Title text="Let's Work Together" size={fontSize.title1} />
           <Text color="gray" size={fontSize.subtitle1}>
-            {subtitle}
+            Have a project you&apos;d like to discuss?
           </Text>
           <Button
+            onClick={() => history.push('/contact')}
             size={buttonSize.LARGE}
             theme={buttonTheme.DEFAULT}
             type={buttonType.BUTTON}
           >
-            <Text size={fontSize.subtitle1}>{btnText}</Text>
+            <Text size={fontSize.subtitle1}>Get in Touch</Text>
           </Button>
         </div>
         <div className={classes.iconContent}>
@@ -38,9 +44,6 @@ const Footer = ({ title, subtitle, btnText, social }) => {
             </div>
           ))}
         </div>
-      </div>
-      <div className={classes.owner}>
-        <p>© 2021 Seb Kay. All rights reserved.</p>
       </div>
     </div>
   );
