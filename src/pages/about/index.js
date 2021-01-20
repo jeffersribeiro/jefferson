@@ -12,8 +12,10 @@ import Divider from '../../components/atoms/divider';
 import Footer from '../../components/organisms/footer';
 
 import useStyles from './styles';
+import { useHistory } from 'react-router';
 
 const About = () => {
+  const history = useHistory();
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -43,6 +45,7 @@ const About = () => {
           process in getting a website launched.
         </Text>
         <Button
+          onClick={() => history.push('/process')}
           size={buttonSize.LARGE}
           theme={buttonTheme.DEFAULT}
           type={buttonType.BUTTON}
@@ -66,6 +69,7 @@ const About = () => {
           get in touch and we can get to work!
         </Text>
         <Button
+          onClick={() => history.push('/contact')}
           size={buttonSize.LARGE}
           theme={buttonTheme.DEFAULT}
           type={buttonType.BUTTON}
