@@ -4,7 +4,7 @@ const Blog = () => (
   <div
     style={{
       width: '100%',
-      height: '10vh',
+      height: '50vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',

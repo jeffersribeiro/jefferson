@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
   label: {},
   input: {
     fontSize: 20,
-    padding: '0 20px',
+    padding: '10px 20px',
     width: '99%',
     backgroundColor: '#ededed',
     border: 'solid 1px #a6a4a4',
