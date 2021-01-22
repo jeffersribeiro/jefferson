@@ -6,7 +6,9 @@ const useStyles = makeStyles(() => ({
   },
   label: {},
   input: {
-    width: '100%',
+    fontSize: 20,
+    padding: '0 20px',
+    width: '99%',
     backgroundColor: '#ededed',
     border: 'solid 1px #a6a4a4',
     borderRadius: 4,

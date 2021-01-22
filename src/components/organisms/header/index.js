@@ -78,7 +78,7 @@ const Header = ({ links }) => {
     <div className={classes.root}>
       <div className={classes.nav}>
         <div>
-          <Link href="/" type={linkType.ANCOR}>
+          <Link color="white" href="/" type={linkType.ANCOR}>
             R. Jef
           </Link>
         </div>
@@ -91,17 +91,20 @@ const Header = ({ links }) => {
           <Title
             size={fontSize.title1}
             text={subtitle[index].title}
+            color="white"
           />
         </div>
         <div>
-          <Text size={fontSize.title2}>{subtitle[index].desc}</Text>
+          <Text color="white" size={fontSize.title2}>
+            {subtitle[index].desc}
+          </Text>
         </div>
         <div>
           {location.pathname === '/' && (
             <Button
               onClick={() => history.push('/projects')}
               size={buttonSize.LARGE}
-              theme={buttonTheme.DEFAULT}
+              theme={buttonTheme.ROUNDED}
               type={buttonType.BUTTON}
             >
               <Text size={fontSize.subtitle1}>My projects</Text>
@@ -109,6 +112,7 @@ const Header = ({ links }) => {
           )}
         </div>
       </div>
+      <div className={classes.um}></div>
     </div>
   );
 };

@@ -40,17 +40,21 @@ const useStyles = makeStyles(() => ({
       },
     },
   },
-  link: ({ type }) => ({
+  link: ({ type, color }) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    color: type === linkType.ANCOR ? '#4a4a4a' : '#0073f7',
+    color:
+      (!color && (type === linkType.ANCOR ? '#4a4a4a' : '#0073f7')) ||
+      color,
     fontSize: 25,
     margin: '0 10px',
     textDecoration: 'none',
     transition: 'color 0.3s',
     '&:hover': {
-      color: type === linkType.ANCOR ? 'black' : '#0073f7',
+      color:
+        (!color && (type === linkType.ANCOR ? 'black' : '#0073f7')) ||
+        color,
     },
     '& div': {
       transition: 'width 0.2s',

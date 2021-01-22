@@ -7,6 +7,19 @@ const theme = createMuiTheme({
         html: {
           padding: 0,
           margin: 0,
+          overflowX: 'hidden',
+          '&::-webkit-scrollbar': {
+            width: '10px',
+          },
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: '#f1f1f1',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#888',
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: '#555',
+          },
         },
       },
     },

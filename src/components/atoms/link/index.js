@@ -8,8 +8,8 @@ export const linkType = {
   NAVIGATE: 'navigate',
 };
 
-const MyLink = ({ type, href, children, onClick }) => {
-  const classes = useStyles({ type });
+const MyLink = ({ type, href, children, onClick, color }) => {
+  const classes = useStyles({ type, color });
   return (
     <div type={type} className={classes.root}>
       {type === linkType.ANCOR ? (
@@ -29,6 +29,7 @@ const MyLink = ({ type, href, children, onClick }) => {
 };
 
 MyLink.defaultProps = {
+  color: 'black',
   type: linkType.ANCOR,
   children: '',
   href: '#',
@@ -36,6 +37,7 @@ MyLink.defaultProps = {
 };
 
 MyLink.propTypes = {
+  color: PropTypes.string,
   type: PropTypes.string,
   href: PropTypes.string,
   children: PropTypes.any,

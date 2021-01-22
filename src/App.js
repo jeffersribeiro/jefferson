@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
 
 import Router from './global/routes';
-
+import EmailProveder from './pages/contact/context';
 const App = () => (
-  <Container maxWidth="xl">
-    <Router />
-  </Container>
+  <div>
+    <EmailProveder>
+      <Router />
+    </EmailProveder>
+  </div>
 );
 
 export default App;

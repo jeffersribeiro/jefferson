@@ -9,7 +9,7 @@ const NavLinks = ({ links }) => {
   return (
     <div className={classes.root}>
       {links.map(({ type, href, label }, index) => (
-        <Link key={index} href={href} type={type}>
+        <Link color="white" key={index} href={href} type={type}>
           {label}
         </Link>
       ))}
